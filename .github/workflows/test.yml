@@ -14,5 +14,5 @@ jobs:
 
     - run: npm ci
     - run: npm run lint
-    - run: npx run pretest
+    - run: npx pretest
     - run: npm test
