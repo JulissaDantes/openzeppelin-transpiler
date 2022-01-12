@@ -14,5 +14,5 @@ jobs:
 
     - run: npm ci
     - run: npm run lint
-    - run: npm run ava -u
+    - run: npx ava -u
     - run: npm test
