@@ -7,6 +7,7 @@ import path from 'path';
 export async function getBuildInfo(version: string): Promise<BuildInfo> {
   const buildInfoPath = path.join(hre.config.paths.artifacts, 'build-info');
   const filenames = await fs.readdir(buildInfoPath);
+  console.log(filenames);
   const buildInfos: BuildInfo[] = await Promise.all(
     filenames.map(async f => JSON.parse(await fs.readFile(path.join(buildInfoPath, f), 'utf8'))),
   );
