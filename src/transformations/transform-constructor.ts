@@ -99,7 +99,7 @@ export function* transformConstructor(
         transform: (_, helper) => {
           const argsList = helper.read(constructorNode.parameters).replace(/^\((.*)\)$/s, '$1');
           const uArgList = GetUnchainedArguments(constructorNode, argsList);
-          console.log('sending', uArgList);
+
           return formatLines(
             1,
             initializer(helper, argsList, uArgList, argNames).slice(0, -1),

@@ -41,6 +41,7 @@ for (const fileName of fileNames) {
   test(fileName, t => {
     const file = t.context.files.find(f => f.fileName === fileName);
     t.not(file, undefined, 'file not found');
+    console.log('filename', fileName);
     t.snapshot(file);
   });
 }
