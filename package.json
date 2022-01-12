@@ -18,7 +18,6 @@
     "compile": "tsc",
     "prepare": "rimraf dist && npm run compile",
     "watch": "tsc -w",
-    "pretest":"tsc && hardhat compile && ava -u",
     "lint": "eslint . --ignore-path .gitignore --max-warnings 0"
   },
   "repository": "github:OpenZeppelin/openzeppelin-transpiler",
